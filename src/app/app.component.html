@@ -1,12 +1,16 @@
-QR:
-<br/>
+Base QR:
 <div>
   <input
   type="text"
-  (change)="change($event)"
+  (change)="changeBase($event)"
   style="width: 400px"
   [value]="qrInfo"
-/>
-<br/>
-  <qr-code [value]="qrInfo" [size]="width" [background]="'red'" [foreground]="'yellow'"></qr-code>
+  />
 </div>
+<br/>
+Name: <input type="text" (change)="changeName($event)"  style="width: 400px;"/>
+<br/>
+Age: <input type="text" (change)="changeAge($event)"  style="width: 400px;"/>
+<p>{{qrInfo}}</p>
+<br/>
+  <qr-code [value]="qrInfo" [size]="width"></qr-code>
